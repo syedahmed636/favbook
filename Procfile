@@ -1,1 +1,1 @@
-web: gunicorn bipolar.wsgi --log-file -
+web: gunicorn favbook.wsgi --log-file -
