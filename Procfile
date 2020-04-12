@@ -1,0 +1,1 @@
+web: gunicorn bipolar.wsgi --log-file -

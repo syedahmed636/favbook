@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:http="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+  	<link rel="stylesheet" href="css/glyphicon.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  	<script src="https://kit.fontawesome.com/fe48c47a95.js" crossorigin="anonymous"></script>
+  	<script src="js/jquery.js"></script>
+  	<script src="js/bootstrap.js"></script>
+    <style>
+        .container {
+          padding:20px;
+          width:600px;
+          font-family:arial;
+
+        }
+        a{
+          color:#3366cc;
+          font-size:15px;
+        }
+        header{
+          font-family:arial;
+        }
+    </style>
+</head>
+    <body>
+      <header>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+            <div class="container "  style="border: 2px solid #3366cc ; border-radius:20px; background-color:white;   ">
+                <div class="page-header text-center   ">
+                  <h2>LOGIN</h2>
+                </div>
+               <form action="" method="post" class="form-horizontal">
+                   {% csrf_token %}
+                    <div class="form-group">
+							 		 <label class="col-md-5 control-label">User Name *:</label>
+							 		 <div class="col-md-5">
+							 		  <input id="username" type="text" class="form-control" name="username" required>
+							 		 </div>
+                    </div>
+                   <div class="form-group">
+							 		 <label class="col-md-5 control-label">Password  *:</label>
+							 		 <div class="col-md-5">
+							 		  <input id="pass" type="password" class="form-control" name="password" required>
+							 		 </div>
+                    </div>
+                   <br>
+
+
+               <div class="col-md-4 col-md-offset-3 row">
+                 <button class="btn btn-primary" type="submit" value="login" class="form-control">LOGIN</button>
+               </div>
+                    <a href="{% url 'register' %}"><b>Register ?</b></a><br>
+                   <a href="{% url 'password_reset' %}"><b>Forgot_Password ?</b></a>
+
+
+
+
+                    {% for message in messages %}
+                   <h4><i>{{message}}</i></h4>
+            {% endfor %}
+
+
+
+               </form>
+                <br>
+                <br>
+
+
+          </div>
+
+    		</header>
+
+
+
+    </body>
+
+</html>

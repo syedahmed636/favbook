@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Book</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+  	<link rel="stylesheet" href="css/glyphicon.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  	<script src="https://kit.fontawesome.com/fe48c47a95.js" crossorigin="anonymous"></script>
+  	<script src="js/jquery.js"></script>
+  	<script src="js/bootstrap.js"></script>
+
+    <style>
+        .container {
+          padding:20px;
+          width:600px;
+          font-family:arial;
+
+        }
+        a{
+          color:white;
+        }
+        header{
+          font-family:arial;
+        }
+         h2{
+				font-size:30px;
+				font-family:times new roman;
+				}
+    </style>
+</head>
+    <body>
+
+
+
+
+      <header>
+        <br>
+        <br>
+            <div class="container "  style="border: 2px solid #3366cc ; border-radius:20px; background-color:white;   ">
+                <div class="page-header text-center   ">
+                  <h2>ENTER BOOK DETAILS:</h2>
+                </div>
+               <form action="add" method="post" >
+                    {% csrf_token %}
+
+
+
+               <div class="row">
+                    <div  class="form-group col-md-6  ">
+                      <label > Title of the Book: *</label>
+                      <input  type="text"  name="title"  class="form-control"  placeholder="Book Title"required>
+                    </div>
+                    <div  class="form-group col-md-6  ">
+                      <label >BOOK URL : *</label>
+                      <input  type="text"  name="url"  class="form-control"  placeholder="Book URL"required>
+                    </div>
+
+
+               </div>
+                   <div class="row">
+                 <div  class="form-group col-md-6  ">
+                   <label >Author of the book: *</label>
+                   <input  type="text"  name="author"  class="form-control"  placeholder="Book Author"required>
+                 </div>
+
+
+                 <div  class="form-group col-md-6  ">
+                   <label >Genre of Book: *</label>
+                   <input type="text"  name="genre"  class="form-control" placeholder="Book Genre"required>
+                 </div>
+
+
+             </div>
+
+
+
+            <div class="col-md-4 col-md-offset-3 row">
+                 <button class="btn btn-primary" type="submit" value="ADD" class="form-control">ADD</button>
+               </div>
+
+
+
+
+
+
+
+
+
+
+    		</header>
+
+
+
+    </body>
+</html>
